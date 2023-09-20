@@ -4,7 +4,7 @@ function itnt_ppa_menu()
     add_menu_page(
         'ITNT PDF Processing Assistent', 
         'ITNT PPA', 
-        'show_ppa', 
+        'manage_options', 
         'itnt_ppa', 
         'itnt_ppa_main', 
         99 
