@@ -10,9 +10,8 @@ function itnt_ppa_menu()
         99 
     );
     
-    add_action('admin_menu', 'itnt_ppa_menu');
 }
-
+add_action('admin_menu', 'itnt_ppa_menu');
 
 function itnt_ppa_main()
 {
