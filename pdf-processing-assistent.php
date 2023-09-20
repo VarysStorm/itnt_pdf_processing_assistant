@@ -11,7 +11,7 @@ Text Domain: ITNT PDF Processing Assistent
 include 'ppa-backend.php';
 
 
-function mein_plugin_setup() {
+function itnt_ppa_activate() {
     global $wpdb;
 
     $table_name = $wpdb->prefix . 'ppa-enqueries';
