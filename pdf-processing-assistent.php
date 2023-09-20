@@ -8,23 +8,13 @@ Text Domain: ITNT PDF Processing Assistent
 
 */
 
-include 'ppa-backend.php';
+require __DIR__ . 'ppa-backend.php';
 
 
 function itnt_ppa_activate() {
-    global $wpdb;
-
-    $table_name = $wpdb->prefix . 'ppa-enqueries';
-
-    $sql = "CREATE TABLE $table_name (
-        id int(10) NOT NULL AUTO_INCREMENT,
-        name VARCHAR(100) NOT NULL,
-        PRIMARY KEY  (id)
-    )";
-
-    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-    dbDelta($sql);
+    wp_register_style('itnt_pdf_processing_assistent', plugins_url('css/style.css');
+    wp_enqueue_style('wp_register_style');
 }
-register_activation_hook(__FILE__, 'pdf-processing-assistent');
+register_activation_hook(__FILE__, 'itnt_ppa_activate');
 
 ?>
