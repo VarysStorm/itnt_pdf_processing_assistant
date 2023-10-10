@@ -18,4 +18,3 @@ function itnt_ppa_activate() {
 }
 register_activation_hook(__FILE__, 'itnt_ppa_activate');
 ?>
-
