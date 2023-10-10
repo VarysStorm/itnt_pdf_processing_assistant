@@ -44,6 +44,8 @@ function itnt_ppa_main(){
             $output .= '</div>';
         $output .= '</div>';
     $output .= '</div>';
+    $output .= '<div id="ppa-notifaction">';
+    $output .= '</div>';
 
 
     echo $output;
