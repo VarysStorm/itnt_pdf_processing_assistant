@@ -26,3 +26,15 @@ h1{
 .plugin-title h1{
     color:#ff9e0c;
 }
+
+.ppa-body{
+    width: 100%;
+    height: 100%;
+}
+.ppa-wrapper{
+    width: 100%;
+    height: 100%;
+    margin: 2%;
+    border:#ff9e0c 3px solid;
+    border-radius: 10px;
+}
