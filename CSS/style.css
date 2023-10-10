@@ -32,9 +32,9 @@ h1{
     height: 100%;
 }
 .ppa-wrapper{
-    width: 100%;
+    width: 95%;
     height: 100%;
     margin: 2%;
-    border:#ff9e0c 3px solid;
+    border: #ff9e0c 3px solid;
     border-radius: 10px;
 }
