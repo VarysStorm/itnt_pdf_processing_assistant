@@ -30,6 +30,20 @@ function itnt_ppa_main(){
             $output .= '<h1>ITNT PPA</h1>';
         $output .= '</div>'; 
     $output .= '</div>';
+    $output .= '<div class="ppa-body">';
+        $output .= '<div class="ppa-wrapper">';
+            $output .= '<div class="row-1 half-width">';
+                $output .= '<div class="ppa-wrapper-box" id="ppa-w-b-1">';
+                $output .= '</div>';
+                $output .= '<div class="ppa-wrapper-box" id="ppa-w-b-2">';
+                $output .= '</div>';
+            $output .= '</div>';
+            $output .= '<div class="row-2 full-width">';
+                $output .= '<div class="ppa-wrapper-box" id="ppa-w-b-3">';
+                $output .= '</div>';
+            $output .= '</div>';
+        $output .= '</div>';
+    $output .= '</div>';
 
 
     echo $output;
