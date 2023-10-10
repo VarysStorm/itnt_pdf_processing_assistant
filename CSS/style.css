@@ -33,8 +33,24 @@ h1{
 }
 .ppa-wrapper{
     width: 95%;
-    height: 100%;
+    height: fit-content;
     margin: 2%;
     border: #ff9e0c 3px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.ppa-wrapper .half-width{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.ppa-wrapper .half-width .ppa-wrapper-box{
+    width: 48%;
+}
+.ppa-wrapper-box{
+    height: 300px;
+    border: #ff9e0c 3px solid;
+    margin: 1%;
     border-radius: 10px;
 }
