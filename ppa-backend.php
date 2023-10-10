@@ -19,7 +19,7 @@ function itnt_ppa_main(){
     wp_enqueue_style( 'ppa_css' );
 
     wp_register_script('ppa-backend_script', plugins_url('/js/ppa-backend.js', __FILE__), array());
-    wp_register_script('pdfjs', plugins_url('/js/pdfjs-3.11.174-dist/build/pdf.js', __FILE__), array(), '3.11.174', false);
+    wp_register_script('pdfjs', plugins_url('js/pdf.js/src/pdf.js', __FILE__), array());
 
     wp_enqueue_script('pdfjs');
     wp_enqueue_script('ppa-backend_script');
