@@ -14,7 +14,6 @@ add_action('admin_menu', 'itnt_ppa_menu');
 
 function itnt_ppa_main(){
 
-
     wp_register_style( 'ppa_css', plugins_url('/css/style.css', __FILE__), array() );
     $font_awesome_cdn = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css';
 

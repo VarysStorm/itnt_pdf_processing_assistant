@@ -1,5 +1,6 @@
-<?
-function erstelle_neuen_beitrag($titel, $inhalt) {
+<?php
+
+function create_blog_post($titel, $inhalt) {
     // Post-Daten vorbereiten
     $post_data = array(
         'post_title'    => $titel,
@@ -9,16 +10,25 @@ function erstelle_neuen_beitrag($titel, $inhalt) {
     );
 
     // Einfügen des Beitrags in die Datenbank
-    $neuer_beitrag_id = wp_insert_post($post_data);
+    $new_post_id = wp_insert_post($post_data);
 
     // Überprüfe, ob das Einfügen erfolgreich war
-    if ($neuer_beitrag_id) {
-        echo "Beitrag erfolgreich erstellt! ID: $neuer_beitrag_id";
+    if ($new_post_id) {
+        echo "Beitrag erfolgreich erstellt! ID: $new_post_id";
     } else {
         echo "Fehler beim Erstellen des Beitrags.";
     }
 }
 
-// Beispielaufruf
-erstelle_neuen_beitrag('Neuer Beitragstitel', 'Inhalt des neuen Beitrags.');
+if(isset ($_POST)){
+
+    $newTitle = $_POST['title'];
+    $newText = $_POST['text'];
+    create_blog_post('Neuer Beitragstitel', 'Inhalt des neuen Beitrags.');
+} 
+else{
+    $error = "Es wurde kein Beitrag erstellt. Es wurden keine Daten übergeben."
+
+    
+}
 ?>
