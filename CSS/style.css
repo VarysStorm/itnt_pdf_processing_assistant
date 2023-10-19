@@ -29,7 +29,7 @@ h1{
 
 .ppa-body{
     width: 100%;
-    height: 100%;
+    height: fit-content;
 }
 .ppa-wrapper{
     width: 95%;
