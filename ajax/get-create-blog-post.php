@@ -1,22 +1,29 @@
 <?php
 
-function create_blog_post($titel, $inhalt) {
-    // Post-Daten vorbereiten
+function create_blog_post($newTitle, $newText) {
+
     $post_data = array(
-        'post_title'    => $titel,
-        'post_content'  => $inhalt,
-        'post_status'   => 'publish', // 'publish', 'draft' oder 'pending'
-        'post_type'     => 'post',    // Der Beitragstyp (kann auch 'page' sein)
+        'post_title'    => $newTitle,
+        'post_content'  => $newText,
+        'post_status'   => 'publish', 
+        'post_type'     => 'post',    
     );
 
-    // Einfügen des Beitrags in die Datenbank
+    $msg = array(
+        'message' => '',
+        'status' => true
+
+    );
+
+
     $new_post_id = wp_insert_post($post_data);
 
-    // Überprüfe, ob das Einfügen erfolgreich war
+
     if ($new_post_id) {
-        echo "Beitrag erfolgreich erstellt! ID: $new_post_id";
+        $msg['message'] = "Beitrag erfolgreich erstellt! ID: $new_post_id";
     } else {
-        echo "Fehler beim Erstellen des Beitrags.";
+        $msg['message'] = "Fehler beim Erstellen des Beitrags.";
+        $msg['status'] = false;
     }
 }
 
@@ -24,11 +31,13 @@ if(isset ($_POST)){
 
     $newTitle = $_POST['title'];
     $newText = $_POST['text'];
-    create_blog_post('Neuer Beitragstitel', 'Inhalt des neuen Beitrags.');
+    create_blog_post($newTitle, $newText);
+    echo json_encode($msg);
+
 } 
 else{
-    $error = "Es wurde kein Beitrag erstellt. Es wurden keine Daten übergeben."
-
-    
-}
+    $msg['message'] = "Es wurde kein Beitrag erstellt. Es wurden keine Daten übergeben."
+    $msg['status'] = false;
+    echo json_encode($msg);
+    }
 ?>
