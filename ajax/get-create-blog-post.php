@@ -1,12 +1,14 @@
 <?php
 
-function create_blog_post($newTitle, $newText) {
+function create_blog_post($newTitle, $newText, $newCategory = null, $guidURL) {
 
     $post_data = array(
         'post_title'    => $newTitle,
         'post_content'  => $newText,
         'post_status'   => 'publish', 
-        'post_type'     => 'post',    
+        'post_type'     => 'post',
+        'post_category' => $newCategory,
+        'guid'          => $guidURL,
     );
 
     $msg = array(
