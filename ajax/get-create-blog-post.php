@@ -14,7 +14,6 @@ function create_blog_post($newTitle, $newText, $newCategory = null, $guidURL) {
     $msg = array(
         'message' => '',
         'status' => true
-
     );
 
 
