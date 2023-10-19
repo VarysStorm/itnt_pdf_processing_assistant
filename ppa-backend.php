@@ -21,13 +21,16 @@ function itnt_ppa_main(){
     wp_enqueue_style( 'ppa_css' );
 
     wp_register_script('ppa-backend_script', plugins_url('/js/ppa-backend.js', __FILE__), array());
-    wp_register_script('pdfjs', plugins_url('js/pdf.js/src/pdf.js', __FILE__), array());
+    //wp_register_script('pdfjs', plugins_url('js/pdf.js/src/pdf.js', __FILE__), array());
     $pdfjs_url = plugins_url('js/pdf.js/src/pdf.js', __FILE__);
-    wp_enqueue_script('pdfjs');
+    $pdfjs_worker_url = plugins_url('js/pdf.js/src/pdf.worker.js', __FILE__);
+    //wp_enqueue_script('pdfjs');
     wp_enqueue_script('ppa-backend_script');
 
+
     $output = '';
-    $output = "<script src='$pdfjs_url'></script>";
+    $output .= "<script src='https://unpkg.com/pdfjs-dist@2.10.377/build/pdf.js'></script>";
+    $output .= "<script src='https://unpkg.com/pdfjs-dist@2.10.377/build/pdf.worker.js'></script>";
     $output .= '<div class="plugin-title">';
         $output .= '<div class="wrapper">';
             $output .= '<h1>ITNT PPA</h1>';
