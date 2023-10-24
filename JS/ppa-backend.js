@@ -5,23 +5,32 @@ jQuery( document ).ready(function() {
     jQuery('#ppa-w-b-3').html('Beitrags Generierung Box');
 
 
-    const actualBtn = jQuery('#fileUploadButton');
-
-    const fileChosen = document.getElementById('file-chosen');
-
-    actualBtn.addEventListener('change', function(){
-        fileChosen.textContent = this.files[0].name
-    })
+    jQuery('#pdf-upload-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+    
+        var formData = new FormData(this);
+    
+        formData.append('action', 'handle_pdf_upload');
+    
+        jQuery.ajax({
+            url: '/ajax/handle-pdf-upload.php',
+            type: 'POST',
+            data: formData,
+            success: function (response) {
+                console.log('Antwort:', response);
+            },
+            error: function (xhr, status, error) {
+                console.error('Fehler beim Upload:', error);
+            }
+        });
 });
 
 function processPDF(){
-    var pdfUrl = ''; // Setze die PDF-URL hier
+    var pdfUrl = ''; 
 
-// Verwende eine externe JS-Bibliothek (z.B. jQuery) oder lade pdf.js direkt in HTML
-// Hier wird ein Beispiel mit jQuery gezeigt:
     jQuery.getScript('https://unpkg.com/pdfjs-dist@2.10.377/build/pdf.js', function () {
         jQuery.getScript('https://unpkg.com/pdfjs-dist@2.10.377/build/pdf.worker.js', function () {
-        // Lese die Daten aus dem PDF aus
+
             pdfjsLib.getDocument(pdfUrl).then(function (pdf) {
              for (var pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
                  pdf.getPage(pageNum).then(function (page) {
