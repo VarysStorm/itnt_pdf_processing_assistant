@@ -5,7 +5,7 @@ jQuery( document ).ready(function() {
     jQuery('#ppa-w-b-3').html('Beitrags Generierung Box');
 
 
-    jQuery('#pdf-upload-form').addEventListener('submit', function (e) {
+    jQuery('#pdfUploadForm').submit(function (e) {
         e.preventDefault();
     
         var formData = new FormData(this);
@@ -23,8 +23,8 @@ jQuery( document ).ready(function() {
                 console.error('Fehler beim Upload:', error);
             }
         });
-});
-
+    });
+})
 function processPDF(){
     var pdfUrl = ''; 
 
