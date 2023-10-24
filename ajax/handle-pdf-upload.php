@@ -16,6 +16,7 @@
         }
     
         die();
+        //<pre> print_r('Aufruf erfolgreich');exit();
     }
     
     add_action('wp_ajax_handle_pdf_upload', 'handle_pdf_upload');

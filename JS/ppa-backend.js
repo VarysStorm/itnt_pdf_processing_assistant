@@ -13,11 +13,12 @@ jQuery( document ).ready(function() {
         formData.append('action', 'handle_pdf_upload');
     
         jQuery.ajax({
-            url: '/wp-content/plugins/itnt_pdf_processing_assistent/ajax/handle-pdf-upload.php',
+            url: '/wp-content/plugins/itnt_pdf_processing_assistant/ajax/handle-pdf-upload.php',    
             type: 'POST',
             data: formData,
             processData: false,
             contentType: false,
+            enctype: 'multipart/form-data',
             success: function (response) {
                 console.log('Antwort:', response);
             },
