@@ -13,6 +13,7 @@ Stable Tag: 0.1
 */
 
 require __DIR__ . '/ppa-backend.php';
+require __DIR__ . '/ppa-config.php';
 
 function itnt_ppa_activate() {
 }

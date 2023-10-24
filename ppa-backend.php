@@ -40,7 +40,7 @@ function itnt_ppa_main(){
         $output .= '<div class="ppa-wrapper">';
             $output .= '<div class="row-1 half-width">';
                 $output .= '<div class="ppa-wrapper-box" id="ppa-w-b-1">';
-                    $output .= '<form action="#" id="pdf-upload-form" method="post" enctype="multipart/form-data">';
+                    $output .= '<form action="#" id="pdfUploadForm" method="post" enctype="multipart/form-data">';
                     $output .= '<div>';
                         $output .= '<input type="file" name="pdf_file" accept=".pdf" class="" id="fileUpload">';
                     $output .= '</div>';
