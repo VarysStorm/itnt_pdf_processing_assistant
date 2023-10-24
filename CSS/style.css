@@ -3,15 +3,17 @@ h1{
 }
 #wpbody-content{
     height: 97.5vh;
-    background-color:#2f3139; 
+    background-color:#343541; 
 	padding-bottom:0!important;
 }
 #wpcontent{
     padding-left:0;
 }
-
+.hidden{
+    display:none;
+}
 .plugin-title{
-    border-bottom: #ff710c 3px solid;
+    border-bottom: #c5c5d2 3px solid;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,13 +21,13 @@ h1{
 }
 .plugin-title .wrapper{
     padding: 0% 3% 0;
-    border: 2px #ff710c solid;
+    border: 2px #c5c5d2 solid;
     border-bottom: 0;
     border-radius: 15px 15px 0px 0px;
-    background-color: #2f3139;
+    background-color: #343541;
 }
 .plugin-title h1{
-    color:#ff710c;
+    color:#c5c5d2;
 }
 
 .ppa-body{
@@ -36,7 +38,7 @@ h1{
     width: 95%;
     height: fit-content;
     margin: 2%;
-    border: #ff710c 3px solid;
+    border: #c5c5d2 3px solid;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -51,7 +53,7 @@ h1{
 }
 .ppa-wrapper-box{
     min-height: 300px;
-    border: #ff710c 3px solid;
+    border: #c5c5d2 1px solid;
     margin: 1%;
     border-radius: 10px;
 }
@@ -63,12 +65,22 @@ h1{
     align-items: center;
 }
 .ppa-wrapper-box form input{
-    color: #ff710c;
+    color: #c5c5d2;
 }
 .ppa-wrapper-box form input{
-    background-color: #2f3139;
-    color: #ff710c;
-    border: 2px solid #ff710c;
+    background-color: #343541;
+    color: #c5c5d2;
+    border: 2px solid #c5c5d2;
     padding: 10px 20px;
     border-radius:10px;
+}
+
+.ppa-wrapper-box form .custom-file-input{
+    background-color: #343541;
+    color: #c5c5d2;
+    border: 2px solid #c5c5d2;
+    padding: 10px 20px;
+    border-radius:10px;
+    cursor: pointer;
+
 }

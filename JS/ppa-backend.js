@@ -3,6 +3,15 @@ jQuery( document ).ready(function() {
 
     jQuery('#ppa-w-b-2').html('PDF Canva Box');
     jQuery('#ppa-w-b-3').html('Beitrags Generierung Box');
+
+
+    const actualBtn = jQuery('#fileUploadButton');
+
+    const fileChosen = document.getElementById('file-chosen');
+
+    actualBtn.addEventListener('change', function(){
+        fileChosen.textContent = this.files[0].name
+    })
 });
 
 function processPDF(){
